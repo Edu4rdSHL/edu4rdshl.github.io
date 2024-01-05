@@ -20,7 +20,7 @@ timezone: America/Bogota
 
 title: Eduard's Blog # the main title
 
-tagline: Navigating the World of Programming and Cibersecurity # it will display as the sub-title
+tagline: Loving tech, Linux, containers, open-source and programming. # it will display as the sub-title
 
 description: >- # used by seo meta and the atom feed
   Your go-to resource for all things related to programming and cybersecurity.
