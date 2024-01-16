@@ -74,10 +74,10 @@ theme_mode: # [light|dark]
 # will be added to all image (site avatar & posts' images) paths starting with '/'
 #
 # e.g. 'https://cdn.com'
-img_cdn:
+img_cdn: https://raw.githubusercontent.com/Edu4rdSHL/edu4rdshl.github.io/main/_imgs
 
 # the avatar on sidebar, support local or CORS resources
-avatar: "https://raw.githubusercontent.com/Edu4rdSHL/edu4rdshl.github.io/main/_imgs/edu4rdshl.jpeg"
+avatar: /edu4rdshl.jpeg
 
 # boolean type, the global switch for TOC in posts.
 toc: true
