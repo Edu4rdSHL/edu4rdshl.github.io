@@ -3,6 +3,7 @@
 source "https://rubygems.org"
 
 gem "jekyll-theme-chirpy", "~> 6.3.1"
+gem 'jekyll-compose', group: [:jekyll_plugins]
 
 group :test do
   gem "html-proofer", "~> 3.18"
