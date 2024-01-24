@@ -23,7 +23,7 @@ title: Eduard's Blog # the main title
 tagline: Loving tech, Linux, containers, open-source and programming. # it will display as the sub-title
 
 description: >- # used by seo meta and the atom feed
-  Your go-to resource for all things related to programming and cybersecurity.
+  Your go-to resource for all things related to Linux, containers, open-source and programming.
 
 # fill in the protocol & hostname for your site, e.g., 'https://username.github.io'
 url: "https://edu4rdshl.dev"
