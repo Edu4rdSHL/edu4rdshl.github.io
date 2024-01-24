@@ -47,15 +47,14 @@ Xorg and Wayland are totally different, so, it's expected that some settings nee
 All you need is a `.conf` file in your `$XDG_CONFIG_HOME` folder (usually `$HOME/.config`), or whatever the application read it (if capable) with the following content:
 
 ```bash
---enable-features=UseOzonePlatform
+--enable-features=UseOzonePlatform,WaylandWindowDecorations
 --ozone-platform=wayland
---enable-features=WaylandWindowDecorations
 ```
 
 There are applications that doesn't read the `.conf` file, so you need to update the `.desktop` file, to avoid changes being overwritten, you can copy the `.desktop` file to your `$XDG_DATA_HOME/applications` (usually `$HOME/.local/share/applications`) folder, and update the `Exec` line with the following content:
 
 ```bash
-Exec=/usr/bin/executable --enable-features=UseOzonePlatform --ozone-platform=wayland --enable-features=WaylandWindowDecorations %U
+Exec=/usr/bin/executable --enable-features=UseOzonePlatform,WaylandWindowDecorations --ozone-platform=wayland
 ```
 
 ### Google Chrome
@@ -68,6 +67,10 @@ Exec=/usr/bin/executable --enable-features=UseOzonePlatform --ozone-platform=way
 ```
 
 and it will configure the application to use Wayland.
+
+### Steam
+
+At this point, Steam doesn't support Wayland and you will have rendering issues when scrolling the webviews inside the app, unless you turn off hardware acceleration for the webviews rendering and then it will work fine. To do that, go to `Steam > Settings > Interface > Turn off "Enable GPU accelerated rendering in webviews"`.
 
 ### Visual Studio Code
 
