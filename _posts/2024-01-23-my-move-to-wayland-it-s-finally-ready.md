@@ -42,6 +42,10 @@ As usual, there are some alternatives that should "just work" with Wayland, but 
 
 Xorg and Wayland are totally different, so, it's expected that some settings need to be updated, here are some of the settings I had to update to get my setup working properly:
 
+### Screen Sharing
+
+Many users have found that when running an application natively through Wayland, the screen sharing feature doesn't work as expected. It's because Wayland security model doesn't allow an application to read the content of another application, so, the screen sharing feature doesn't work and will only show your current application window. All you need to do is install [xwaylandvideobridge](https://invent.kde.org/system/xwaylandvideobridge) and it will do the job.
+
 ### Electron apps
 
 All you need is a `.conf` file in your `$XDG_CONFIG_HOME` folder (usually `$HOME/.config`), or whatever the application read it (if capable) with the following content:
@@ -117,7 +121,6 @@ I use the following extensions:
 ### Additional packages
 
 - [nautilus-open-any-terminal](https://aur.archlinux.org/packages/nautilus-open-any-terminal/): Context-menu entry for opening other terminal in Nautilus. Note: I use Xfce terminal because Console/Gnome Terminal does have a focus issue when you open a link from the terminal and go back to it. You can use it to have the "Open in terminal" option in Nautilus for any terminal you want.
-- [xwaylandvideobridge](https://archlinux.org/packages/extra/x86_64/xwaylandvideobridge/): Utility to allow streaming Wayland windows to X applications. Very useful for sharing your screen on Google Meet, Zoom, Discord, etc.
 - [vesktop](https://aur.archlinux.org/packages/vesktop/): A standalone Electron app that loads Discord & Vencord. Supports streaming audio via Discord's screen share feature, something that the official Discord app [doesn't support yet](https://support.discord.com/hc/en-us/community/posts/360050971374-Linux-Screen-Share-Sound-Support?page=2).
 
 ### Some tweaks/tips
