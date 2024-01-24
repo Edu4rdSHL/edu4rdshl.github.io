@@ -117,11 +117,12 @@ I use the following extensions:
 - [xwaylandvideobridge](https://aur.archlinux.org/packages/xwaylandvideobridge/): Utility to allow streaming Wayland windows to X applications. Very useful for sharing your screen on Google Meet, Zoom, Discord, etc.
 - [vesktop](https://aur.archlinux.org/packages/vesktop/): A standalone Electron app that loads Discord & Vencord. Supports streaming audio via Discord's screen share feature, something that the official Discord app [doesn't support yet](https://support.discord.com/hc/en-us/community/posts/360050971374-Linux-Screen-Share-Sound-Support?page=2).
 
-### Some tweaks
+### Some tweaks/tips
 
-- Disabled the "Activities" hot corner.
-- Set a fixed number of workspaces.
+- Disable the "Activities" hot corner, it's very annoying.
+- Set a fixed number of workspaces. That way, you can have pre-defined apps for each workspace number.
 - If an app supports Wayland, please use it, it will improve your experience by a lot. Running apps through Xwayland is not bad, but it's not the same as running them natively and you'll notice it.
+- You can use [xorg-xeyes](https://www.archlinux.org/packages/extra/x86_64/xorg-xeyes/) to check if an app is running through Xwayland or not, just run `xeyes` in your terminal and move the mouse on the app's surface. If you see the eyes moving, it's running through Xwayland, if you don't, it's running natively.
 
 ## Conclusion
 
