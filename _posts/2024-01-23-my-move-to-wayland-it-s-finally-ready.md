@@ -44,7 +44,7 @@ Xorg and Wayland are totally different, so, it's expected that some settings nee
 
 ### Screen Sharing
 
-Many users have found that when running an application natively through Wayland, the screen sharing feature doesn't work as expected. It's because Wayland security model doesn't allow an application to read the content of another application, so, the screen sharing feature doesn't work and will only show your current application window. All you need to do is install [xwaylandvideobridge](https://invent.kde.org/system/xwaylandvideobridge) and it will do the job.
+Many users have noticed that when running a Xwayland application inside a Wayland session, the screen sharing feature doesn't work as expected. It's because Wayland security model doesn't allow X clients to access the content of Wayland applications, so, the screen sharing feature will only show the applications running under X. To solve it, all you need to do is install [xwaylandvideobridge](https://invent.kde.org/system/xwaylandvideobridge) and it will do the job.
 
 ### Electron apps
 
