@@ -2,8 +2,8 @@
 layout: post
 title: 'Introducing Rusnapshot: Handy Btrfs snapshot tool in Rust'
 date: 2024-02-06 23:27 -0500
-categories: ['btrfs' 'rust' 'filesystem']
-tags: ['btrfs' 'rust' 'filesystem']
+categories: ['btrfs', 'rust', 'filesystem']
+tags: ['btrfs', 'rust', 'filesystem']
 author: edu4rdshl
 image:
   path: /rusnapshot.jpeg
