@@ -46,6 +46,20 @@ Xorg and Wayland are totally different, so, it's expected that some settings nee
 
 Many users have noticed that when running a Xwayland application inside a Wayland session, the screen sharing feature doesn't work as expected. It's because Wayland security model doesn't allow X clients to access the content of Wayland applications, so, the screen sharing feature will only show the applications running under X. To solve it, all you need to do is install [xwaylandvideobridge](https://invent.kde.org/system/xwaylandvideobridge) and it will do the job.
 
+### Apps not respecting the system's dark mode
+
+Some apps don't respect or just ignore the system's dark mode (i.e xfce4-terminal, Element Desktop, and others), to fix it you need to:
+
+```bash
+# Install the gnome-themes-extra package
+pacman -S gnome-themes-extra
+```
+
+```bash
+# Set the following setting using gsettings
+gsettings set org.gnome.desktop.interface gtk-theme "Adwaita-dark"
+```
+
 ### Electron apps
 
 All you need is a `.conf` file in your `$XDG_CONFIG_HOME` folder (usually `$HOME/.config`), or whatever the application read it (if capable) with the following content:
