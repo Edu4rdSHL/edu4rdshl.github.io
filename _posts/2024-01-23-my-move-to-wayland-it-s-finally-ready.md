@@ -127,10 +127,10 @@ export QT_QPA_PLATFORM=wayland
 I use the following extensions:
 
 - Workspace Indicator (built-in).
-- [Blur my shell](https://extensions.gnome.org/extension/3193/blur-my-shell/)
 - [Caffeine](https://extensions.gnome.org/extension/517/caffeine/)
 - [Freon](https://extensions.gnome.org/extension/841/freon/)
 - [Grand theft focus](https://extensions.gnome.org/extension/5410/grand-theft-focus/)
+- [Pano - Clipboard Manager](https://extensions.gnome.org/extension/5278/pano/)
 
 ### Additional packages
 
