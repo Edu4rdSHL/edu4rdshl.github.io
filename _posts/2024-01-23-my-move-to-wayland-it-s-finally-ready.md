@@ -139,7 +139,7 @@ I use the following extensions:
 
 ### Some tweaks/tips
 
-- Disable the "Activities" hot corner, it's very annoying.
+- Disable the "Activities" hot corner if you don't like it.
 - Set a fixed number of workspaces. That way, you can have pre-defined apps for each workspace number.
 - If an app supports Wayland, please use it, it will improve your experience by a lot. Running apps through Xwayland is not bad, but it's not the same as running them natively and you'll notice it.
 - You can use [xorg-xeyes](https://www.archlinux.org/packages/extra/x86_64/xorg-xeyes/) to check if an app is running through Xwayland or not, just run `xeyes` in your terminal and move the mouse on the app's surface. If you see the eyes moving, it's running through Xwayland, if you don't, it's running natively.
