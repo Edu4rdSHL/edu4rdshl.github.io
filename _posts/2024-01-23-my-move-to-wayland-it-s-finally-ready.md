@@ -8,9 +8,8 @@ author: edu4rdshl
 image:
   path: /wayland-gnome.png
   alt: Wayland and Gnome. Image by itsfoss.com
+excerpt: I was a Wayland detractor, had very bad experiences with it in the past, but I decided to give it a try again, and it's time to say goodbye to Xorg.
 ---
-
-I was a Wayland detractor, had very bad experiences with it in the past, but I decided to give it a try again, and it's time to say goodbye to Xorg.
 
 ## My past experiences with Wayland
 
