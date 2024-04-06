@@ -1,9 +1,9 @@
 ---
 layout: post
 title: 'Linux: my thoughts after a 12 year journey'
-date: 2024-02-03 21:25 -0500
-categories: ['linux', 'archlinux', 'desktop', 'development']
-tags: ['linux', 'archlinux', 'desktop', 'development']
+date: 2024-04-06 02:25 -0500
+categories: ['linux']
+tags: ['linux', 'history', 'journey', 'opinion']
 author: edu4rdshl
 image:
   path: /12-years-linux-journey.png
@@ -14,4 +14,36 @@ Let me share what I've learned after 13 years of using Linux as my main operatin
 
 ## Background
 
-I started using Linux in 2011, I was a Windows user, but I was curious about Linux, so I decided to give it a try. I started with Ubuntu, and I was very happy with it, but I wanted to learn more about Linux, so I decided to try ArchLinux, and I've been using it since then.
+I started using Linux in 2011, I was a Windows user, but I was curious about Linux, so I decided to give it a try. I started with Ubuntu, and I was very happy with it, at some point, I wanted to learn much more about Linux, so I decided to try ArchLinux, and that was the best decision I've ever made, as I never looked back.
+
+Note: You don't need to use ArchLinux to learn Linux, you can learn Linux using any distribution, but ArchLinux is a good distribution to learn Linux because it _forces_ you to read the documentation, and to understand how the system works - ~~not since the guided installer~~ -.
+
+## Is Linux better than Windows or MacOS?
+
+It's a very common question, and the answer is: It depends on your needs. Don't let people decide for you what is better; try it yourself and make a choice. Linux is better **for me**. I do a lot of work specifically targeted for Linux (software development, containers, DevOps, sysadmin, DBA, etc.), so Linux is the best option. I also play many games, and I can say that Linux has become an excellent gaming platform. It's not the same as Windows; there are some games that don't work, and some others that work but have some issues, but generally, it works very well thanks to Wine/Proton, and you can always check whether a game works or not using [ProtonDB](https://www.protondb.com/). So, if you are a gamer, you should consider that.
+
+Regarding macOS, I, personally, don't like the idea of being locked to a specific hardware, and I don't like the idea of paying a lot of money for a computer that I can build by myself with better specs while being free to install whatever I want on it. MacOS is an excellent system; the hardware of Apple devices is good, too, but it's not **for me**. I've heard that graphic designers, video editors, and music producers try to prefer macOS, so, again, it depends on your needs. I have an M2 MacBook, and I'd say that it's the best laptop I've ever had. Its battery life is a game changer, plus I only use it while traveling to connect remotely to my main machine, to attend some meetings, or to do some light work, so I don't have to worry about the hardware lock.
+
+## Is Linux hard to use?
+
+Let's be very honest here: yes and no. First, **don't let people saying that Linux is hard to use** take away your desire to try Linux; just keep in mind that **Linux is very different from Windows and macOS**. Now, let me explain why I said yes and no.
+
+### Why yes and no?
+
+Linux is a free and open source operating system; therefore, you can find countless [distributions](https://en.wikipedia.org/wiki/Linux_distribution), desktop environments, and software, and that's a good thing, but it can be overwhelming for a newcomer. Also, almost each distribution targets a specific audience, so you can find distributions that are really HARD to use (Gentoo, Slackware, some may say ArchLinux, but it has changed since they introduced [a guided installer](https://wiki.archlinux.org/title/archinstall)), and you can find distributions that are straightforward to use (Ubuntu, Fedora, Pop!_OS, Garuda). So, if you are a newcomer, you should start with a distribution that is easy to use, and then, when you feel comfortable with it and **only** if you want to try and learn something new, you can try other distributions.
+
+### Why is it different?
+
+Every major operating system has its own way of doing things, and Linux is not an exception. Going further, every Linux distribution has its own way of doing things. For example, if you want to install software on Windows, you download an executable file, double-click it, follow the instructions or simply install it from the software store. On macOS, you open the App Store, click on install, and you're done. On Linux, you have many ways to install software: you can use the package manager of your distribution, you can compile the software from source, you can use a script, you can use a container, you can use a snap, you can use a flatpak, you can use an AppImage, etc. So, it's different; it may sound overwhelming, but you don't need to learn and use all of them; learning one is sufficient to do the job. So, it's not hard; it's just different.
+
+## Is Linux ready for day-to-day desktop use?
+
+Yes, undoubtedly. I've been using Linux as my main operating system for 13 years for different kinds of work. From complex software development to gaming, or simply browsing the web, watching movies, listening to music, etc. Linux is ready for day-to-day desktop use, and it's getting better every day. I've seen many improvements in the last few years (thanks, Lennart, for systemd!), and I'm pleased with them.
+
+## Final words
+
+I'm happy with Linux, and it has really changed my life, like, really. Currently, all my work is for Linux-based platforms. I've learned a lot, and I'm still learning. I've met many people, and I've made some friends. Furthermore, I've contributed to many projects, and I've created some projects. I've helped many people, and I've been helped by many people (shout-outs to the ArchLinux IRC people!). I've had some fun, and I've had some frustration. Not only that, but I've had some success, and I've had some failure. I've had some good times, and I've had some bad times. But, at the end of the day, I'm very happy with Linux; it's perfect for me, and I'm truly grateful for that.
+
+Thank you to the Linux community; a BIG thanks to the ArchLinux team who made the perfect distribution for me; and a BIGGER thanks to Linus Torvalds for creating the Linux kernel.
+
+I hope you find this post useful, and I hope you give Linux a try. If you have any questions, feel free to reach out to me via any of the links to my social media in the left sidebar.
