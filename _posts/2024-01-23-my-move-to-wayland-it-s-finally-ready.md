@@ -124,6 +124,14 @@ QT 5 and 6 have Wayland enabled by default only if the `qt5-wayland` and `qt6-wa
 export QT_QPA_PLATFORM=wayland
 ```
 
+### SDL
+
+SDL 2 has Wayland enabled by default, but you can force it (and fallback to X11 if it isn't available) by setting the following environment variable (probably in your `profile.d`):
+
+```bash
+export SDL_VIDEODRIVER="wayland,x11"
+```
+
 ## Additional tweaks
 
 ### Extensions
