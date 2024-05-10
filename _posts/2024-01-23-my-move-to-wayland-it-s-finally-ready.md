@@ -59,6 +59,11 @@ pacman -S gnome-themes-extra
 gsettings set org.gnome.desktop.interface gtk-theme "Adwaita-dark"
 ```
 
+```bash
+# Set the following setting using gsettings
+$ gsettings set org.gnome.desktop.interface color-scheme prefer-dark
+```
+
 ### Electron apps
 
 All you need is a `.conf` file in your `$XDG_CONFIG_HOME` folder (usually `$HOME/.config`), or whatever the application read it (if capable) with the following content:
