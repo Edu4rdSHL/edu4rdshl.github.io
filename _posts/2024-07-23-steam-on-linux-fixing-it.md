@@ -51,4 +51,12 @@ If you are experiencing artifacts when navigating the store, you can try it:
 
 ## Conclusion
 
+The final file should look like this:
+
+```ini
+@nClientDownloadEnableHTTP2PlatformLinux 0
+@cMaxInitialDownloadSources 15
+unShaderBackgroundProcessingThreads 6
+```
+
 Happy gaming! 🎮
