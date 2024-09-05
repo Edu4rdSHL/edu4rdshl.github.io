@@ -139,12 +139,13 @@ export SDL_VIDEODRIVER="wayland,x11"
 I use the following extensions:
 
 - Workspace Indicator (built-in).
-- [Clipboard Indicator](https://extensions.gnome.org/extension/779/clipboard-indicator/): A clipboard manager which history and multimedia support.
-- [Just Perfection](https://extensions.gnome.org/extension/3843/just-perfection/): A collection of tweaks for the Gnome Shell. I personally recommend enabling the "Window Demands Attention Focus" under the "Behavior" section.
+- System Monitor (built-in).
+- [Pano](https://extensions.gnome.org/extension/5278/pano/): Next-gen Clipboard Manager for Gnome Shell.
+- [Freon](https://extensions.gnome.org/extension/841/freon/): Shows temperature and fan speed from sensors in your PC.
+- [Caffeine](https://extensions.gnome.org/extension/517/caffeine/): Disable the screensaver and auto suspend, enable DND when opening full-screen apps, and more.
 
 ### Additional packages
 
-- [nautilus-open-any-terminal](https://aur.archlinux.org/packages/nautilus-open-any-terminal/): Context-menu entry for opening other terminal in Nautilus. Note: I use Xfce terminal because Console/Gnome Terminal does have a focus issue when you open a link from the terminal and go back to it. You can use it to have the "Open in terminal" option in Nautilus for any terminal you want.
 - [vesktop](https://aur.archlinux.org/packages/vesktop/): A standalone Electron app that loads Discord & Vencord. Supports streaming audio via Discord's screen share feature, something that the official Discord app [doesn't support yet](https://support.discord.com/hc/en-us/community/posts/360050971374-Linux-Screen-Share-Sound-Support?page=2).
 
 ### Some tweaks/tips
