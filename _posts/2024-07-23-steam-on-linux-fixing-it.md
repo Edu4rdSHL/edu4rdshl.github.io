@@ -35,6 +35,8 @@ If you are experiencing slow download speeds on Steam, you can try it:
 
 ### Shaders compilation taking forever
 
+**Important:** On decent GPUs, shaders compilation are just a waste of CPU time and can be disabled. However, on low-end GPUs, shaders compilation will help to run the games better. To disable shaders compilation, you can go to `Steam > Settings > Downloads > Shader Pre-Caching` and disable the `Enable Shader Pre-Caching` option at the end of the page.
+
 If you are experiencing shaders compilation taking forever, you can try it:
 
 - **Increase the number of threads**: By default, Steam uses only 1 thread to compile shaders, you can increase the number of threads by modifying the `$HOME/.steam/steam/steam_dev.cfg` file, adding the following content:
@@ -44,6 +46,8 @@ unShaderBackgroundProcessingThreads 6 # Note: make sure to NOT use more threads 
 ```
 
 ### Artifacts when navigating the store
+
+**Important:** This issue is not common as of now (2025) - thanks Nvidia, but it was common in the past. Have in mind that disabling GPU accelerated rendering on web view can cause the store to be a lot slower, especially on high-resolution displays.
 
 If you are experiencing artifacts when navigating the store, you can try it:
 
