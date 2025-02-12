@@ -50,6 +50,13 @@ As per the official documentation:
 
 The differences between Conduit and Conduwuit are detailed [in their website](https://conduwuit.puppyirl.gay/differences.html).
 
+### Preparation
+
+If you want to preserve E2E messages, you need to export your encryption keys. On [Element](https://element.io/), you can do it by:
+
+- For room keys, go to: `Settings > Security & Privacy > Cryptography > Export E2E room keys`.
+- For session keys, go to: `Settings > Encryption > Export keys`.
+
 ### Installation and configuration
 
 The installation and configuration of Conduwuit are very straightforward, especially if you're going to use the Docker image. You can find the installation instructions [here](https://conduwuit.puppyirl.gay/deploying/docker.html).
@@ -129,19 +136,26 @@ After that, you can run:
 
 And you're good to go.
 
+### Post-installation
+
+After logging in, you can import your encryption keys on [Element](https://element.io/) by:
+
+- For room keys, go to: `Settings > Security & Privacy > Cryptography > Import E2E room keys`.
+- For session keys, go to: `Settings > Encryption > Import keys`.
+
 ### Results
 
 After running Conduwuit for a week, I can say that it's a great alternative to Synapse; it's lightweight, featureful, and easy to configure. The database size is ~500MB, and the RAM and CPU usage are not even noticeable. I'm happy with Conduwuit, and I'm staying with Matrix.
 
 ### When migrating, will I lost messages from previous rooms or private messages?
 
-TLDR: Any E2E data, or data on a server with federation disabled will be lost. Otherwhise, everything else (including permissions) will be kept due to federation.
+TLDR: Private messages (there's a workaround but it's kinda meh because doesn't depend entirely on you), or data on a server with federation disabled will be lost. Otherwhise, everything else (including permissions) will be kept due to federation.
 
-**Important:** for this to work, you need to use **the same** `@username:domain.tld` that you previously used.
+**Important:** for this to work, you need to use **the same** `@username:domain.tld` that you previously used, as well as have already imported your encryption keys. See the [Preparation](#preparation) and [Post-installation](#post-installation) sections.
 
 When your `@username:domain.tld` joins a room on a server that does have federation enabled, the server will ask the other server for the room state, and the other server will send it. That does mean that you will get all the messages, permissions, and other metadata from the room. Basically, you just have to rejoing the rooms and you will get everything back.
 
-Private messages is a different story because they are: E2E and invite-only by default; so, the other person can't kick you from the room because both will have the same permissions level and even if you leave to be reinvited, the messages will be lost due to E2E encryption.
+Private messages is a different story because they are invite-only by default; so, the other person can't kick you from the room because both will have the same permissions level. There's a workaround for this: you need to leave the DM room, and the other person needs to invite you again. This is kinda complex because you will have to ask everyone on your DMs to invite you again.
 
 # Conclusion
 
