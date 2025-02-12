@@ -60,6 +60,7 @@ At the time of writing it, the following did the trick for me:
 
 - docker-compose.yml
 
+{% raw %}
 ```yaml
 services:
     caddy:
@@ -103,6 +104,8 @@ networks:
     caddy:
         external: true
 ```
+{% endraw %}
+
 - conduwuit.toml
   
 **Note:** the following are only the values that I changed to get it working, you can find the full configuration file [here](https://github.com/girlbossceo/conduwuit/blob/main/conduwuit-example.toml).
@@ -129,6 +132,14 @@ And you're good to go.
 ### Results
 
 After running Conduwuit for a week, I can say that it's a great alternative to Synapse; it's lightweight, featureful, and easy to configure. The database size is ~500MB, and the RAM and CPU usage are not even noticeable. I'm happy with Conduwuit, and I'm staying with Matrix.
+
+### When migrating, will I lost messages from previous rooms or private messages?
+
+TLDR: Any E2E data, or data on a server with federation disabled will be lost. Otherwhise, everything else (including permissions) will be kept due to federation.
+
+When your `@username:domain.tld` joins a room on a server that does have federation enabled, the server will ask the other server for the room state, and the other server will send it. That does mean that you will get all the messages, permissions, and other metadata from the room. Basically, you just have to rejoing the rooms and you will get everything back.
+
+Private messages is a different story because they are: E2E and invite-only by default; so, the other person can't kick you from the room because both will have the same permissions level and even if you leave to be reinvited, the messages will be lost due to E2E encryption.
 
 # Conclusion
 
