@@ -6,7 +6,7 @@ categories: ["matrix", "conduwuit", "synapse", "self-hosting"]
 tags: ["matrix", "conduwuit", "synapse", "self-hosting"]
 author: edu4rdshl
 image:
-  path: /images/conduwuit-matrix.jpeg
+  path: /conduwuit-matrix.jpeg
   alt: A image of Conduwuit and Matrix. Image created by the author.
 excerpt: I was about to leave Matrix one week ago because of the high resource and disk space usage of Synapse. But then I found Conduwuit, a lightweight but featureful alternative to Synapse. And now I'm staying with Matrix.
 ---
