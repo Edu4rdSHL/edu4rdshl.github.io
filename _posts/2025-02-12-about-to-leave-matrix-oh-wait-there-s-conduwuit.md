@@ -137,6 +137,8 @@ After running Conduwuit for a week, I can say that it's a great alternative to S
 
 TLDR: Any E2E data, or data on a server with federation disabled will be lost. Otherwhise, everything else (including permissions) will be kept due to federation.
 
+**Important:** for this to work, you need to use **the same** `@username:domain.tld` that you previously used.
+
 When your `@username:domain.tld` joins a room on a server that does have federation enabled, the server will ask the other server for the room state, and the other server will send it. That does mean that you will get all the messages, permissions, and other metadata from the room. Basically, you just have to rejoing the rooms and you will get everything back.
 
 Private messages is a different story because they are: E2E and invite-only by default; so, the other person can't kick you from the room because both will have the same permissions level and even if you leave to be reinvited, the messages will be lost due to E2E encryption.
