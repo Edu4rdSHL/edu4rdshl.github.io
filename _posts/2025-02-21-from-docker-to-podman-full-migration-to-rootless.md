@@ -15,11 +15,13 @@ excerpt: Migrate from Docker to rootless Podman, including volumes, networks, po
 
 There are many posts about migrating from Docker to Podman, but most of them are focused on the basics... `docker export` / `podman import`. This post is about a full migration, including volumes data, container's metadata, and more. Everything, into a rootless Podman environment.
 
-I have created a tool called [fly-to-podman](https://github.com/Edu4rdSHL/fly-to-podman) that automates the migration process from what I'm going to explain here.
+I have created a tool called [fly-to-podman](https://github.com/Edu4rdSHL/fly-to-podman) that automates the migration process from what I'm going to explain here, please use that tool instead of the manual process because the post will not be updated with the latest changes.
 
 # Prerequisites
 
 Start with the obvious, you need to have Docker and Podman installed, and Docker needs to be running.
+
+Appart from that, you need to have `jq`, `rsync`, and `bash`.
 
 # Migration
 
@@ -59,7 +61,7 @@ This small script will export all Docker images to a tarball, then import them i
 
 ## Volumes data
 
-Volumes data is stored in `/var/lib/docker/volumes/` for Docker and in `~/.local/share/containers/storage/volumes/` for Podman. We can create the same volumes names in Podman so that they are tracked in the database and then copy the data.
+Volumes data is stored in `/var/lib/docker/volumes/` for Docker and in `~/.local/share/containers/storage/volumes/` for Podman. We can create the same volumes names in Podman so that they are tracked in the database and then copy the data, and chown it accordingly.
 
 {% raw %}
 ```bash
@@ -69,10 +71,16 @@ migrate_volumes() {
     PODMAN_VOLUMES_PATH=$(podman info --format json | jq -r '.store.volumePath')
     DOCKER_VOLUMES_PATH="/var/lib/docker/volumes"
 
+    RSYNC_OPTS=""
+    if [[ "$UID" -ne 0 ]]; then
+        # If not running as root, make sure to chown the files to the current user
+        RSYNC_OPTS+=" --chown=$(id -u):$(id -g)"
+    fi
+
     for volume in $(docker volume ls --format json | jq -r '.Name'); do
         echo "Migrating volume: $volume"
         podman volume create "$volume" &&
-            sudo rsync -a "$DOCKER_VOLUMES_PATH/$volume/_data/" "$PODMAN_VOLUMES_PATH/$volume/_data"
+            sudo rsync -a "$RSYNC_OPTS" "$DOCKER_VOLUMES_PATH/$volume/_data/" "$PODMAN_VOLUMES_PATH/$volume/_data"
     done
 }
 ```
