@@ -278,6 +278,13 @@ migrate_containters() {
 
 After running the scripts on that order, you should have all your Docker containers, networks, images, and volumes migrated to rootless Podman with the same state as before.
 
+# Thing I like about Podman
+
+- **Rootless**: Podman is rootless by default, which is a big plus for security.
+- **Docker compatibility**: Podman is mostly compatible with Docker, so you can use the same commands.
+- **Autoupdates**: On Docker, you need to use something like [Watchtower](https://github.com/containrrr/watchtower) to update your containers, but Podman has [podman auto-update](https://docs.podman.io/en/latest/markdown/podman-auto-update.1.html) built-in.
+- **Podman-compose**: Podman has a built in `podman compose` command that is compatible with `docker-compose.yml` files and with the `docker-compose` provider.
+
 # Caveats
 
 After migrating from Docker to Podman, you may encounter some issues:
