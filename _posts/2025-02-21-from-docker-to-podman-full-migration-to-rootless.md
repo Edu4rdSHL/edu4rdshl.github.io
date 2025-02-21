@@ -295,8 +295,8 @@ After migrating from Docker to Podman, you may encounter some issues:
 
 Some minor but still annoying issues:
 
-- The system journal will gets spammed with [porman-events](https://docs.podman.io/en/stable/markdown/podman-events.1.html) messages. The only way to disable them is to set `events_logger = "none"` in `~/.config/containers/containers.conf`, but then you won't be able to use `podman container logs`, which is a big downside.
-- Even if you set a default network in `~/.config/containers/containers.conf`, [Podman will ignore it](https://github.com/containers/podman/issues/25377).
+- The system journal will gets spammed with [podman-events](https://docs.podman.io/en/stable/markdown/podman-events.1.html) messages. The only way to disable them is to set `events_logger = "none"` in `~/.config/containers/containers.conf`, but then you won't be able to use `podman container logs`, which is a big downside.
+- ~~Even if you set a default network in `~/.config/containers/containers.conf`, [Podman will ignore it](https://github.com/containers/podman/issues/25377).~~ The documentation was not clear, you can actually set a default network in `~/.config/containers/containers.conf` using the `netns` option.
 
 I ended up with the following configuration in `~/.config/containers/containers.conf` to workaround the issues:
 
@@ -308,8 +308,11 @@ events_logfile_path="/home/edu4rdshl/.local/share/containers/containers.log"
 events_logger = "file"
 events_logfile_max_size = "1m"
 
-[network]
-default_network = "podman" # https://github.com/containers/podman/issues/25377
+[containers]
+default_sysctls = [
+  "net.ipv4.ping_group_range=0 10000",
+]
+netns = "podman_rootless" # The default network that you want to use for containers, can be overriden with --network
 ```
 
 # Tips
