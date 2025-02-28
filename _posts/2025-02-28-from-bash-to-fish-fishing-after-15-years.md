@@ -17,7 +17,7 @@ I've been using [Bash](https://www.gnu.org/software/bash/) for over 15 years. It
 
 But things change, more modern alternatives appear, new useful features are added, features that will probably never be added to bash because of compatibility reasons. Time ago, I decided to give [Zsh](https://www.zsh.org/) a try, and honestly, it was a disaster. I'm almost sure that it was my fault, I didn't give it enough time, etc; but imo, the Zsh defaults are a mess, not intuitive at all, and therefore not good for someone too used to bash (who is a little nervous to leave the shell he's used for 15 years).
 
-After some time investigating, and seeing that distros like ArchLinux uses Fish as the default shell on the live ISO, I decided to give it a try. And I'm loving it.
+After some time investigating, and seeing that distros like ArchLinux uses [Fish](https://fishshell.com/) as the default shell on the live ISO, I decided to give it a try. And I'm loving it.
 
 # Why Fish?
 
@@ -34,7 +34,7 @@ The first thing that I loved about [Fish](https://fishshell.com/), is how ready-
 
 Migrating from Bash to Fish is not hard, but it takes a bit of work if you have a bunch of bash-specific functions, aliases, etc. I had a lot of them, and I had to rewrite all of them. You can use some AI to help you with that (most IAs do a decent job for trivial tasks like it), if you don't want to do it manually. Here's a nice summary on the Fish documentation that will help you to understand the Fish syntax easier: [Fish for bash users](https://fishshell.com/docs/current/fish_for_bash_users.html)
 
-I migrated all of my functions and all in about 2 hours, so it isn't that hard.
+I migrated all of my functions and all in about 2 hours, so it isn't that hard. The official documentation for [Fish](https://fishshell.com/) can be found [here](https://fishshell.com/docs/current/index.html).
 
 ## Installing requirements
 
