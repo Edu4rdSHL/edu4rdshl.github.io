@@ -167,6 +167,15 @@ fisher install edc/bass
 
 As I was doing a shell migration after 15 years, why not change to a cool prompt too? I decided to give [Oh My Posh](https://ohmyposh.dev/) a try. It's a prompt theme engine for any shell: Bash, Zsh, Fish, _and even Powershell_. Well, it was designed for Powershell, initially. I'm using the [easy-term](https://ohmyposh.dev/docs/themes#easy-term) theme. See the [Main configuration file](#main-configuration-file) section to see how to initialize it.
 
+### Changing the shell
+
+To change the shell, you can use the following command:
+
+```sh
+chsh -s /usr/bin/fish $USER
+```
+After that, you need to log out and log in again.
+
 # Results
 
 This is how my terminal looks now:
