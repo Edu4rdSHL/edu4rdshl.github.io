@@ -63,9 +63,6 @@ Here's my `~/.config/fish/config.fish`:
 # Disable the greeting, thanks fish
 set fish_greeting ""
 
-# Limit history, by default it's 256000 deduplicated entries
-set -U fish_history_limit 10000
-
 # Environment variables (Always set)
 # Use neovim as the default editor
 set -x EDITOR nvim
