@@ -52,7 +52,7 @@ paru -S oh-my-posh-bin
 
 ## Configuration
 
-The Fish configuration is stored in `~/.config/fish/`. The main configuration file is `~/.config/fish/config.fish`. You can also have a `~/.config/fish/functions/` directory to store your functions, and a `~/.config/fish/completions/` directory to store your completions. There's also a `~/.config/fish/conf.d/` directory to store your drop-in configuration files.
+The Fish configuration is stored in `~/.config/fish/`. The main configuration file is `~/.config/fish/config.fish`. You can also have a `~/.config/fish/functions/` directory to store your functions, and a `~/.config/fish/completions/` directory to store your completions. There's also a `~/.config/fish/conf.d/` directory to store your drop-in configuration files which gets sourced when Fish starts.
 
 ### Main configuration file
 
@@ -72,15 +72,6 @@ set -x DOTNET_CLI_TELEMETRY_OPTOUT 1
 # Set PATH correctly (Appending user paths after system paths)
 set -x PATH $PATH \
             $HOME/.local/bin
-
-# Source aliases (if files exist)
-if test -f ~/.config/fish/aliases/aliases.fish
-    source ~/.config/fish/aliases/aliases.fish
-end
-
-if test -f ~/.config/fish/aliases/private-aliases.fish
-    source ~/.config/fish/aliases/private-aliases.fish
-end
 
 # Run only in interactive sessions
 if status is-interactive
@@ -145,6 +136,31 @@ function dexec
 end
 ```
 {% endraw %}
+
+### Aliases
+
+Aliases use a slightly different syntax in Fish. Here's an example of a few aliases that I use:
+
+{% raw %}
+```sh
+# Use `eza` instead of `ls`
+alias ls "eza"
+
+# Upload Gists
+alias gist "gh gist create"
+
+# Some ls aliases
+alias ll 'eza -l'
+alias la 'eza -la'
+alias l 'eza -hF'
+```
+{% endraw %}
+
+So, just migrate your aliases and put the resulting file(s) in `~/.config/fish/conf.d/`.
+
+### Completions
+
+Fish automatically searches through any directories in the list variable `$fish_complete_path`, and any completions defined are automatically loaded when needed. Most software already have Fish completions, but if you need to create your own, see the [official documentation](https://fishshell.com/docs/current/completions.html).
 
 ### Plugins
 
