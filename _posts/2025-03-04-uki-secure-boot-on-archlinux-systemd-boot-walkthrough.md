@@ -203,9 +203,17 @@ System:
   Boot into FW: supported
 ```
 
-## Especial considerations
+## Special considerations
 
 This setup should continue to work even if you update the BIOS, as long as you don't clear the keys/certs, but you never know what OEMs can do. If you have any issues, you can always clear the keys/certs and re-enroll the keys.
+
+You may also want to tweak `/boot/loader/loader.conf` a bit to disable editing, setting the resolution, etc. Here's an example:
+
+```sh
+timeout 3
+console-mode max
+editor false
+```
 
 # Conclusion
 
