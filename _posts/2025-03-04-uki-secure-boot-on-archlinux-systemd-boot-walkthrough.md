@@ -171,7 +171,7 @@ Target = systemd
 [Action]
 Description = Gracefully upgrading systemd-boot...
 When = PostTransaction
-Exec = /usr/bin/sbctl sign -s -o /usr/lib/systemd/boot/efi/systemd-bootx64.efi.signed /usr/lib/systemd/boot/efi/systemd-bootx64.efi && /usr/bin/systemctl restart systemd-boot-update.service
+Exec = /bin/sh -c '/usr/bin/sbctl sign -s -o /usr/lib/systemd/boot/efi/systemd-bootx64.efi.signed /usr/lib/systemd/boot/efi/systemd-bootx64.efi && /usr/bin/systemctl restart systemd-boot-update.service'
 ```
 This hook will sign the boot loader whenever systemd is installed or upgraded. You can trigger it manually by reinstalling systemd:
 
