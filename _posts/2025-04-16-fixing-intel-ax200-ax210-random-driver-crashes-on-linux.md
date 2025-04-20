@@ -100,6 +100,16 @@ cat /sys/bus/pci/devices/0000:05:00.0/d3cold_allowed
 
 Make sure to change the PCIE device path to your card's path. If the output is `0`, then the udev rule is working.
 
+## Additional notes
+
+If you are using [iwd](https://iwd.wiki.kernel.org/) as your WiFi manager, you can also disable power management and the removal/re-creation of the device (which is one of the main reasons for the driver issue) by appending the following lines to your `/etc/iwd/main.conf` file:
+
+```ini
+[DriverQuirks]
+DefaultInterface=iwlwifi
+PowerSaveDisable=iwlwifi
+```
+
 # Conclusion
 
 This was a very annoying issue that took me a while to figure out, so instead of disabling all the PCI power management for the whole system and affecting temperatures/power saving in general, we can make it work only affected the specific device.
