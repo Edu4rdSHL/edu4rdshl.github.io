@@ -110,6 +110,44 @@ DefaultInterface=iwlwifi
 PowerSaveDisable=iwlwifi
 ```
 
+Finally, if anything else fails, you can use a `ExecStartPre` condition on the `iwd` service to run a small script that re-adds the device via PCI and fixes the issue definitely.
+
+```bash
+systemctl edit iwd.service
+```
+and modify it like this:
+
+```ini
+### Editing /etc/systemd/system/iwd.service.d/override.conf
+### Anything between here and the comment below will become the contents of the drop-in file
+
+[Service]
+ExecStartPre=/usr/local/bin/wififix
+
+### Edits below this comment will be discarded
+snip...
+```
+Then create the script `/usr/local/bin/wififix` with the following content:
+
+{% raw %}
+```bash
+#!/usr/bin/bash
+# Adjust the path to your card
+# You can find the path by running `lspci` and looking for the card
+CARD_PCI_ADDR="0000:05:00.0"
+
+if [ "$UID" -ne 0 ]; then
+  echo "This needs to run as root"
+  exit 1
+fi
+
+echo "Fixing PCI bug for card $CARD_PCI_ADDR"
+echo 1 > /sys/bus/pci/devices/${CARD_PCI_ADDR}/remove && sleep 0.5 && echo 1 > /sys/bus/pci/rescan && sleep 0.5
+```
+{% endraw %}
+
+Make sure to give it execution permissions.
+
 # Conclusion
 
 This was a very annoying issue that took me a while to figure out, so instead of disabling all the PCI power management for the whole system and affecting temperatures/power saving in general, we can make it work only affected the specific device.
