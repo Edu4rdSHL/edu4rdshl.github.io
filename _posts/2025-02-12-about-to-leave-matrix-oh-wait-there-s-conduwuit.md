@@ -13,7 +13,7 @@ excerpt: I was about to leave Matrix one week ago because of the high resource a
 
 ## Update
 
-As of 2025-05-30, conduwuit has been [abandoned](https://girlboss.ceo/~strawberry/conduwuit.txt), but [continuwuity](https://continuwuity.org/) has born as an attempt to continue the project. It's fully compatible with conduwuit, and the migration is as simple as changing the image name in your docker-compose file. The new image name can be found in [their docs](https://continuwuity.org/deploying/docker).
+As of 2025-05-30, Conduwuit has been [abandoned](https://girlboss.ceo/~strawberry/conduwuit.txt), but [Continuwuity](https://continuwuity.org/) has born as an attempt to continue the project. It's fully compatible with Conduwuit, and the migration is as simple as changing the image name in your docker-compose file. The new image name can be found in [their docs](https://continuwuity.org/deploying/docker).
 
 # Introduction
 
