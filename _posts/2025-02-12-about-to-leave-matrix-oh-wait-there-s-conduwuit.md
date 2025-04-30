@@ -11,6 +11,10 @@ image:
 excerpt: I was about to leave Matrix one week ago because of the high resource and disk space usage of Synapse. But then I found Conduwuit, a lightweight but featureful alternative to Synapse. And now I'm staying with Matrix.
 ---
 
+## Update
+
+As of 2025-05-30, conduwuit has been [abandoned](https://girlboss.ceo/~strawberry/conduwuit.txt), but [continuwuity](https://continuwuity.org/) has born as an attempt to continue the project. It's fully compatible with conduwuit, and the migration is as simple as changing the image name in your docker-compose file. The new image name can be found in [their docs](https://continuwuity.org/deploying/docker).
+
 # Introduction
 
 I was an early adopter of Matrix around 2018, at that time there were still numerous issues with the protocol and the clients, but mainly with the federation. Sometimes, messages were lost, rooms were not synced, and there were plenty of issues with the homeserver. That made me leave Matrix around 2020.
@@ -99,7 +103,7 @@ services:
             caddy.1_respond: /.well-known/matrix/client {"m.server":{"base_url":"https://matrix.domain.example"},"m.homeserver":{"base_url":"https://matrix.domain.example"},"org.matrix.msc3575.proxy":{"url":"https://matrix.domain.example"}}
 
     homeserver:
-        image: girlbossceo/conduwuit:latest
+        image: girlbossceo/conduwuit:latest # Replace with forgejo.ellis.link/continuwuation/continuwuity:latest for continuwuity
         restart: unless-stopped
         volumes:
             - db:/var/lib/conduwuit
