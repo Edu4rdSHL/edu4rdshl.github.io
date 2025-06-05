@@ -13,7 +13,7 @@ excerpt: Based.fish is a Fish shell plugin that provides smart suggestions for c
 
 ## Introduction
 
-A few days ago I was looking for a way to improve my Fish shell experience, exactly I wanted to have smart suggestions based on my usage patterns, directory context, and command history. The reasons are simple: if I always use the same commands in the same directories, why not suggest them first? After looking for context-based suggestions, I found [Atuin](https://github.com/atuinsh/atuin), which is very well-known. It's a great tool, but doesn't provide what I wanted, it basically shows you the most used commands, ~~but not based on the current directory or the command you are typing~~ actually, it does provide per-directory completions, but it's very limited. Commands are always shown in the recent order, not per-directory repeats (unless you type something or set the "directory" filter, but then that limits the history to that directory only), and even with the filters, these filters works separately and you have to switch between them for history, they can't be combined and it's unlikely to happen https://github.com/atuinsh/atuin/issues/1611#issuecomment-1908451910, this is a dealbreaker **for me**. I discovered it trying to switch to Atuin.
+A few days ago I was looking for a way to improve my Fish shell experience, exactly I wanted to have smart suggestions based on my usage patterns, directory context, and command history. The reasons are simple: if I always use the same commands in the same directories, why not suggest them first? After looking for context-based suggestions, I found:
 
 So I decided to create my own plugin, which I called [based.fish](https://github.com/Edu4rdSHL/based.fish), because it's **very based**. A full explanation of its features and how it works can be found in the [README](https://github.com/Edu4rdSHL/based.fish/blob/main/README.md), but basically, it provides full context-based autocompletions for commands, using data such as the frequency of use, date of use, and the context of the current command line such as the path where you are, the command you are typing, etc.
 
@@ -60,6 +60,10 @@ See the [usage](https://github.com/Edu4rdSHL/based.fish?tab=readme-ov-file#usage
 ## Demo
 
 ![Demonstration of based.fish](../assets/gifs/based_fish_plugin.gif)
+
+### Other tools
+
+- [Atuin](https://github.com/atuinsh/atuin): a very well-known. It's a great tool, but doesn't provide what I wanted, it basically shows you the most recent commands, it does provide per-directory completions, but it's very limited. Commands are always shown in the recent order, not per-directory repeats (unless you type something or set the "directory" filter, but then that limits the history to that directory only), and even with the filters, these filters works separately and you have to switch between them for history, they can't be combined and it's unlikely to happen https://github.com/atuinsh/atuin/issues/1611#issuecomment-1908451910, this is a dealbreaker **for me**. I discovered it trying to switch to Atuin.
 
 ## Conclusion
 
