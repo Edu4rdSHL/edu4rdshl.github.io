@@ -43,7 +43,7 @@ based.fish uses a SQLite database to store command history and statistics. It an
 
 - It considers the date of the last use, the frequency of use, and the context of the current command line input. Suggestions are made based on this information.
 - If you are in a directory where you have previously used a command multiple times, it will suggest that command first, then the second most used command, and so on.
-- For convenience, during the current session, it will always suggest your previous command first and then append the most used commands in the current directory, to replicate the "normal" behavior of most shells.
+- For convenience, during the current session, it will always suggest your previous command first and then append the most used commands in the current directory, and then then global ones. It's to replicate the "normal" behavior of most shells.
 
 ## Installation
 
