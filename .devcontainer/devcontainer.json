@@ -25,11 +25,5 @@
         "mhutchie.git-graph"
       ]
     }
-  },
-  "runArgs": [
-    "--network=development",
-    "--restart=always",
-    "--name=Jekyll-blog"
-  ],
-  "remoteUser": "root"
+  }
 }
