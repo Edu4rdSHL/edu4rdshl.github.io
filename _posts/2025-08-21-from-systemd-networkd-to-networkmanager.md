@@ -70,7 +70,7 @@ It's almost the de-facto standard for managing network connections on Linux desk
 - **Wireless management**: Wireless management is greatly simplified with NetworkManager. It can handle scanning, connecting, and managing Wi-Fi networks without the need for manual intervention. You can choose between the `iwd` and `wpa_supplicant` backends, depending on your preference.
 - **Integration with systemd**: NetworkManager integrates very well with systemd, allowing you to use systemd-resolved for DNS resolution. This aligns with my existing setup.
 
-It took me a few minutes to migrate all my VPN connections to NetworkManager. No more manual routing (due to the dynamic route-metric handling), one-click activation, and everything just works. Do I want to add a new VPN? Just a few clicks in the GUI, and I'm done.
+It took me a few minutes to install `networkmanager-l2tp`, `networkmanager-openconnect`, `networkmanager-vpnc` and migrate all my VPN connections to NetworkManager. No more manual routing (due to the dynamic route-metric handling), one-click activation, and everything just works. Do I want to add a new VPN? Just a few clicks in the GUI, and I'm done.
 
 ### Tips and tricks
 
