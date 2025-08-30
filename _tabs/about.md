@@ -4,7 +4,7 @@ icon: fas fa-info-circle
 order: 4
 ---
 
-I'm Eduard, a young guy passionate about cybersecurity stuff and programming 🤖. Rust, Python, C/C++ developer and learning more. Founder of several open-source projects and tools such as:
+I'm Eduard, a guy in love with Linux, cybersecurity stuff, and programming 🤖. Rust, Python, and C/C++ developer. I develop firmware sometimes too. Some of my projects are:
 
 - [Findomain - A subdomains recon framework, all-in-one](https://github.com/Findomain/Findomain)
 - [Rusolver - A fast DNS resolutor in Rust](https://github.com/edu4rdshl/rusolver)
@@ -12,10 +12,7 @@ I'm Eduard, a young guy passionate about cybersecurity stuff and programming �
 - [Tor Router](https://github.com/edu4rdshl/tor-router)
 - [Unimap - Scan only once per IP Address](https://github.com/edu4rdshl/unimap)
 - [Nspawn Org](https://nspawn.org)
+- [Fly To Podman - Docker to Podman migrator](https://github.com/Edu4rdSHL/fly-to-podman)
+- [Based.fish - Context-based autocompletion for the Fish shell](https://github.com/Edu4rdSHL/based.fish)
 
-... and more open-source projects!
-
-Your donations are highly appreciated!
-
-- [Github Sponsors](https://github.com/sponsors/Edu4rdSHL)
-- [Buy Me A Coffee](https://www.buymeacoffee.com/edu4rdshl)
+... and more open-source projects! Check out [my GitHub](https://github.com/Edu4rdSHL).
