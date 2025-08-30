@@ -129,9 +129,12 @@ Now you're ready to connect to your Gnome desktop from anywhere! It does work re
 
 Also, your session's state is saved, so you can easily reconnect later and continue where you left off.
 
+## Additional notes
+
+As long as the same principle is maintained, it is possible to achieve the same result in different ways. For example, you could use OpenVPN instead of WireGuard, or, in case that you don't have a remote VPS, you can use solutions like Cloudflare Tunnels, or Ngrok. DDNS may also be an option.
 
 ## Conclusion
 
 It was a very cool experience setting up remote access to my Wayland session using WireGuard. The combination of a VPN and RDP worked seamlessly, and I can now access my desktop from anywhere with ease. I'd to say that WireGuard is one of the best pieces of software I've ever used lately.
 
-Happy RDPing!
+Happy remote accessing!
