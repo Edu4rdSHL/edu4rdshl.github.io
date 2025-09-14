@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 'Rust binaries with Diesel and Postgres: static linking on 2025'
-date: 2025-09-14 19:36 -0500
+date: 2025-09-14 00:05 -0500
 categories: ["rust", "diesel", "postgres", "static linking"]
 tags: ["rust", "diesel", "postgres", "static linking", "musl", "pq-sys"]
 author: edu4rdshl
