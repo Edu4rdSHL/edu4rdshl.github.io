@@ -43,7 +43,9 @@ Xorg and Wayland are totally different, so, it's expected that some settings nee
 
 ### Screen Sharing
 
-Many users have noticed that when running a Xwayland application inside a Wayland session, the screen sharing feature doesn't work as expected. It's because Wayland security model doesn't allow X clients to access the content of Wayland applications, so, the screen sharing feature will only show the applications running under X. To solve it, all you need to do is install [xwaylandvideobridge](https://invent.kde.org/system/xwaylandvideobridge) and it will do the job.
+~~Many users have noticed that when running a Xwayland application inside a Wayland session, the screen sharing feature doesn't work as expected. It's because Wayland security model doesn't allow X clients to access the content of Wayland applications, so, the screen sharing feature will only show the applications running under X. To solve it, all you need to do is install [xwaylandvideobridge](https://invent.kde.org/system/xwaylandvideobridge) and it will do the job.~~
+
+14/09/2025: It doesn't seems to be necessary anymore and screen sharing works just fine with Xwayland apps. In fact, removing `waylandvideobridge` seems to give better results.
 
 ### Apps not respecting the system's dark mode
 
@@ -90,9 +92,15 @@ Exec=/usr/bin/executable --enable-features=UseOzonePlatform,WaylandWindowDecorat
 
 and it will configure the application to use Wayland.
 
+**Note:** since Chrome 140 onwards, `--ozone-platform-hint=auto` is used by default, so you can skip that flag if you're using that version or newer.
+
+If you have an issue with it launching a lot of shortcuts pop-ups when opening chrome, you can workaround it by adding `--disable-features=GlobalShortcutsPortal` to the flags. See [this issue](https://issues.chromium.org/issues/404298968).
+
 ### Steam
 
 At this point, Steam doesn't support Wayland and you will have rendering issues when scrolling the webviews inside the app, unless you turn off hardware acceleration for the webviews rendering and then it will work fine. To do that, go to `Steam > Settings > Interface > Turn off "Enable GPU accelerated rendering in webviews"`.
+
+For more Steam tips, see [Steam on Linux: fixing it!](https://www.edu4rdshl.dev/posts/steam-on-linux-fixing-it/)
 
 ### Visual Studio Code
 
@@ -140,13 +148,14 @@ I use the following extensions:
 
 - Workspace Indicator (built-in).
 - System Monitor (built-in).
-- [Pano](https://extensions.gnome.org/extension/5278/pano/): Next-gen Clipboard Manager for Gnome Shell.
-- [Freon](https://extensions.gnome.org/extension/841/freon/): Shows temperature and fan speed from sensors in your PC.
+- [Clipboard Indicator](https://extensions.gnome.org/extension/779/clipboard-indicator/): Clipboard Manager for Gnome Shell.
 - [Caffeine](https://extensions.gnome.org/extension/517/caffeine/): Disable the screensaver and auto suspend, enable DND when opening full-screen apps, and more.
 
 ### Additional packages
 
-- [vesktop](https://aur.archlinux.org/packages/vesktop/): A standalone Electron app that loads Discord & Vencord. Supports streaming audio via Discord's screen share feature, something that the official Discord app [doesn't support yet](https://support.discord.com/hc/en-us/community/posts/360050971374-Linux-Screen-Share-Sound-Support?page=2).
+~~- [vesktop](https://aur.archlinux.org/packages/vesktop/): A standalone Electron app that loads Discord & Vencord. Supports streaming audio via Discord's screen share feature, something that the official Discord app [doesn't support yet](https://support.discord.com/hc/en-us/community/posts/360050971374-Linux-Screen-Share-Sound-Support?page=2).~~
+
+14/09/2025: Official Discord app now supports audio sharing for several months now. Vesktop is still great, anyway.
 
 ### Some tweaks/tips
 
