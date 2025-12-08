@@ -35,9 +35,9 @@ If you are experiencing slow download speeds on Steam, you can try it:
 
 ### Shaders compilation taking forever
 
-**Important:** On decent GPUs, shaders compilation are just a waste of CPU time and can be disabled. However, on low-end GPUs, shaders compilation will help to run the games better. To disable shaders compilation, you can go to `Steam > Settings > Downloads > Shader Pre-Caching` and disable the `Enable Shader Pre-Caching` option at the end of the page.
+**Important:** On decent GPUs or when using a different Proton version to Valve's (e.g, Proton-Ge, Proton-Cachyos), shaders compilation are just a waste of CPU/GPU time. To disable shaders compilation, you can go to `Steam > Settings > Downloads > Shader Pre-Caching` and disable the `Enable Shader Pre-Caching` option at the end of the page.
 
-If you are experiencing shaders compilation taking forever, you can try it:
+However, on low-end GPUs, or when using Valve's Proton, shaders compilation will help to run the games better. If you are experiencing shaders compilation taking forever, you can try it:
 
 - **Increase the number of threads**: By default, Steam uses only 1 thread to compile shaders, you can increase the number of threads by modifying the `$HOME/.steam/steam/steam_dev.cfg` file, adding the following content:
 

@@ -54,6 +54,8 @@ paru -S oh-my-posh-bin
 
 The Fish configuration is stored in `~/.config/fish/`. The main configuration file is `~/.config/fish/config.fish`. You can also have a `~/.config/fish/functions/` directory to store your functions, and a `~/.config/fish/completions/` directory to store your completions. There's also a `~/.config/fish/conf.d/` directory to store your drop-in configuration files which gets sourced when Fish starts.
 
+**Note:** after using oh-my-posh for some time, I discovered some issues with plugins/functions that modify the prompt. I ended up replacing oh-my-posh with [Tide](https://github.com/IlanCosman/tide), which is better overall in terms of simplicity and performance.
+
 ### Main configuration file
 
 Here's my `~/.config/fish/config.fish`:
