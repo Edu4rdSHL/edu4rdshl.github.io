@@ -11,6 +11,10 @@ image:
 excerpt: The Intel AX200 and AX210 WiFi cards are AWESOME cards for Linux, but they can be annoying when they crash randomly. Let's fix that!
 ---
 
+# TLDR
+
+2025/12/10: the problem was more depth in my case, but this will still work for similar issues. I have an Asus board, which have 2x PCIex16 slots + 2x PCIex1 slots. When using a device on one of the PCIex1 slots, you need to change Advanced > Onboard Devices Configuration > PCIEX16_2 4X-2X Switch > set it to 2X mode. Otherwise, the PCIe lanes on the PCIex1 slot (my AX210 card) stops receiving power after some time, causing the driver to crash. Setting PCIEX16_2 4X-2X Switch to 2X mode fixed the issue completely.
+
 # Introduction
 
 After fighting with bluetooth dongles, which have patetic support on Linux, I decided to buy an Intel AX210 WiFi card because I needed WiFi6 for doing some job-related tasks like measuring WiFi 6 performance of a firmware that I was developing.
