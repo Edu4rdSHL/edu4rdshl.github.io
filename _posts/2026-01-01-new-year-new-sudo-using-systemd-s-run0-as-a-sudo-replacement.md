@@ -22,6 +22,7 @@ systemd 256 [introduced](https://github.com/systemd/systemd/commit/7aed434371756
 - `run0` can be used to run commands in transient systemd services, which can be useful for running long-running commands or services.
 - `run0` uses systemd's logging capabilities natively.
 - By default, `run0` has a **very cool** red background color in the terminal to indicate that you are running a command as root! (take that, sudo!) /s
+
 ... and others.
 
 I want to make a special mention to [Luca Boccassi (bluca)](https://github.com/bluca) who has been involved on many improvements to `run0` and [Polkit](https://github.com/polkit-org/polkit), big kudos to him for that!
