@@ -267,7 +267,7 @@ docker compose -f /home/ubuntu/ejabberd/docker-compose.yml exec ejabberd ejabber
 echo "$(date) - Certbot deploy hook: Completed successfully" >> /var/log/certbot-deploy.log
 ```
 
-### Docker dual-networking stack (IPv4 and IPv6)
+### Docker dual-stack networking (IPv4 and IPv6)
 
 As we are going to use both IPv4 and IPv6 on our XMPP server, we need to configure Docker to work with both IPv4 and IPv6 inside the containers. Add the following configuration to your Docker daemon configuration file, usually located at `/etc/docker/daemon.json`:
 
