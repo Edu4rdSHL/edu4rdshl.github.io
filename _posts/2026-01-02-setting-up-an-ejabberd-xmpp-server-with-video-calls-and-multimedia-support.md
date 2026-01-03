@@ -296,7 +296,7 @@ services:
       - "5280:5280"    # HTTP (admin – preferably an internal bind, but published if needed)
       - "5443:5443"    # HTTPS (API, BOSH, upload, WS, etc.)
       - "5478:5478/udp" # STUN/TURN UDP
-      - "49152-50000:49152-50000/udp" # TURN media relay
+      - "49152-50000:49152-50000/udp" # TURN media relay. It can cause high memory/CPU usage because docker starts a docker-proxy process per port. Enable only if you need TURN.
     environment:
       - EJABBERD_MACRO_HOST=jabber.edu4rdshl.dev
       - REGISTER_ADMIN_PASSWORD=SuperSecretAdminPassword
