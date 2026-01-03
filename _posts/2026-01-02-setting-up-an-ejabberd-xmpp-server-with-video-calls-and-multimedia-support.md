@@ -33,6 +33,8 @@ Trying to find a working configuration for Ejabberd with all the required module
 
 Here's the `ejabberd.yml` file that I ended up using:
 
+**Note:** check Ejabberd's [top-level](https://docs.ejabberd.im/admin/configuration/toplevel/) and [modules](https://docs.ejabberd.im/admin/configuration/modules/) documentation for more details about each option.
+
 {% raw %}
 ```yaml
 hosts:
