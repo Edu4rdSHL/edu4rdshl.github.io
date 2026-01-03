@@ -73,21 +73,7 @@ sql_password: SuperSecretPostgresPassword
 default_db: sql
 
 # Global S2S settings
-s2s_use_starttls: required
-s2s_ciphers: "ECDHE-ECDSA-AES256-GCM-SHA384:ECDHE-RSA-AES256-GCM-SHA384:ECDHE-ECDSA-CHACHA20-POLY1305:ECDHE-RSA-CHACHA20-POLY1305:ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE-RSA-AES128-GCM-SHA256:ECDHE-ECDSA-AES256-SHA384:ECDHE-RSA-AES256-SHA384:ECDHE-ECDSA-AES128-SHA256:ECDHE-RSA-AES128-SHA256"
-s2s_protocol_options:
-  - no_sslv2
-  - no_sslv3
-  - no_tlsv1
-  - no_tlsv1_1
-
-# Global C2S settings
-c2s_protocol_options:
-  - no_sslv2
-  - no_sslv3
-  - no_tlsv1
-  - no_tlsv1_1
-c2s_ciphers: "ECDHE-ECDSA-AES256-GCM-SHA384:ECDHE-RSA-AES256-GCM-SHA384:ECDHE-ECDSA-CHACHA20-POLY1305:ECDHE-RSA-CHACHA20-POLY1305:ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE-RSA-AES128-GCM-SHA256:ECDHE-ECDSA-AES256-SHA384:ECDHE-RSA-AES256-SHA384:ECDHE-ECDSA-AES128-SHA256:ECDHE-RSA-AES128-SHA256"
+s2s_use_starttls: optional
 
 # Listening ports
 listen:
@@ -308,6 +294,7 @@ services:
       - "5280:5280"    # HTTP (admin – preferably an internal bind, but published if needed)
       - "5443:5443"    # HTTPS (API, BOSH, upload, WS, etc.)
       - "5478:5478/udp" # STUN/TURN UDP
+      - "49152-50000:49152-50000/udp" # TURN media relay
     environment:
       - EJABBERD_MACRO_HOST=jabber.edu4rdshl.dev
       - REGISTER_ADMIN_PASSWORD=SuperSecretAdminPassword
