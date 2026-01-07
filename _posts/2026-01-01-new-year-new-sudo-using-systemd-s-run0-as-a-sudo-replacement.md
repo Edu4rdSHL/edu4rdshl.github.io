@@ -15,8 +15,8 @@ excerpt: systemd 256 introduced run0, a new tool that can be used as a sudo repl
 
 systemd 256 [introduced](https://github.com/systemd/systemd/commit/7aed43437175623e0f3ae8b071bbc500c13ce893) `run0`. It isn't a new tool per se, but rather a symbolic link to `systemd-run` that changes its behavior to run commands as root, similar to `sudo`. Some of the motivations to replace `sudo` with `run0` are:
 
-- `run0` doesn't rely on the [setuid](https://en.wikipedia.org/wiki/Setuid) bit. **Note:** It still depends on [Polkit](https://github.com/polkit-org/polkit) which has the setuid bit set, with the exception that Polkit doesn't process arbitrary data, making it a big step forward in terms of security. A more detailed reply to this topic can be found [in this reply](https://github.com/systemd/systemd/issues/32757#issuecomment-2167613521) from one of the devs.
-- `run0` uses [Polkit](https://github.com/polkit-org/polkit) for authorization and privilege management.
+- `run0` doesn't rely on the [setuid](https://en.wikipedia.org/wiki/Setuid) bit.
+- `run0` uses [Polkit](https://github.com/polkit-org/polkit) for authorization and privilege management. **Note:** polkit removed the need for the setuid bit on `/usr/lib/polkit-1/polkit-agent-helper-1`, which was the only component that required it and now uses an IPC socket-activated service for safe privilege escalation. See: [Debian](https://salsa.debian.org/utopia-team/polkit/-/commit/be1d882c785bf05b70d0e606710df94aa54766cc) and [ArchLinux](https://gitlab.archlinux.org/archlinux/packaging/packages/polkit/-/commit/f2e63152919a4a8070ad241b84ad670db3deaf4f) changes.
 - `run0` can be used to run commands in a more controlled environment, with better isolation and resource management.
 - `run0` automatically integrates with D-Bus when running as a different user, making it easier to run commands that require D-Bus access (No more "Failed to connect to bus: No such file or directory" messages!).
 - `run0` can be used to run commands in transient systemd services, which can be useful for running long-running commands or services.
