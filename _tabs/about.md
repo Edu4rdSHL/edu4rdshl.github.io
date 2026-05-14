@@ -16,3 +16,5 @@ I'm Eduard, a guy in love with Linux, cybersecurity stuff, and programming 🤖.
 - [Based.fish - Context-based autocompletion for the Fish shell](https://github.com/Edu4rdSHL/based.fish)
 
 ... and more open-source projects! Check out [my GitHub](https://github.com/Edu4rdSHL).
+
+Want to work with me or have some talk? Check out [my portfolio](https://tolosa.tech/) or [send me a mail](mailto:eduard@tolosa.tech)!
