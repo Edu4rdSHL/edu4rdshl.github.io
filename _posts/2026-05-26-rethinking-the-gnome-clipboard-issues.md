@@ -13,7 +13,7 @@ excerpt: 'GNOME clipboard managers stutter as history grows. Strata fixed it wit
 
 ## Introduction
 
-A clipboard manager is one of those tools you don't think about until you don't have it. It's a basic feature and QoL enhancement on everyone's routine, and yet, some desktop environment(s) doesn't offer one by default (we all know about what I'm talking about but I love that DE for everything else). You copy something, copy something else, and then realize you needed the first thing. Having the history there is great. What is not great is when the history starts to cost you frames.
+A clipboard manager is one of those tools you don't think about until you don't have it. It's a basic feature and QoL enhancement on everyone's routine, and yet, some desktop environment(s) doesn't offer one by default. You copy something, copy something else, and then realize you needed the first thing. Having the history there is great. What is not great is when the history starts hurting your graphical session.
 
 I have used several clipboard managers on GNOME over the years, and they all eventually did the same thing: the desktop would hitch. A small stutter when I copied a screenshot. A longer one when I opened the history and it had grown to a few hundred entries. Search that lagged behind my typing. None of it was a dealbreaker on day one, but it got worse the more I used the tool, which is exactly backwards from what you want. Some worakrounds included disabling image history, limiting a lot the amount of text that they can keep in history, limiting the number of entries and more.
 
